@@ -1,0 +1,24 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content="IE=edge")
+    meta(name='viewport' content='width=device-width')
+    link(rel="stylesheet" href="./css/styles.min.css")
+    script(src="./js/libs.js")
+    script(src="./js/main.min.js")
+
+    <!--[if IE]>
+      script(type="text/javascript") flexibility(document.body);
+    <!--<![endif]-->
+
+    title webcom-test-task
+  body.page
+      include templates/header/header
+      include templates/slider/slider
+      include templates/portfolio/portfolio
+      include templates/advantages/advantages
+      include templates/contacts/contacts
+      include templates/modal/modal
+      include templates/footer/footer
+      include templates/nav/nav

@@ -1,0 +1,9 @@
+- var anchors = ["main", "portfolio", "advantages","scheme-of-work", "reviews", "contacts"]
+
+div.g-nav.js-g-nav.js-anchor
+    - for (var i = 0; i < 6; i++) {
+        if !i
+            a.g-nav__el.js-link(href="#" + anchors[i] class="g-nav__el--active")
+        else
+            a.g-nav__el.js-link(href="#" + anchors[i])
+    - }

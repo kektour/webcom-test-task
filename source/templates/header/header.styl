@@ -1,0 +1,212 @@
+$background=#28363d;
+$mfont=#fff;
+$sfont=#ff8207;
+$hbackground=#1e292f;
+$hfont=#6b848c;
+.header {
+    height 120px;
+    width 100%;
+    background-color $background;
+    display flex;
+    position fixed;
+    top 0;
+    transition: all 0.3s;
+    z-index 4;
+    &__wrapper {
+        max-width 1418px;
+        padding: 0 10px 0 10px;
+        width 100%;
+        margin auto;
+        height 100%;
+        display flex;
+        justify-content: center;
+    }
+    &__logo-container {
+        flex-basis 229px;
+        display flex;
+    }
+    &__logo-link {
+        margin auto;
+        margin-left 0;
+        &:hover {
+            cursor pointer
+        }
+    }
+    &__hamburger {
+        display: none;
+        width: 50px;
+        &-link {
+            margin: auto;
+        }
+        &-logo {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__nav-container {
+        flex-basis 940px;
+        display flex;
+        justify-content space-between;
+        font-family MyriadPro-Regular;
+        &--vertical {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            background: $background;
+        }
+    }
+    &__link {
+        color $mfont;
+        font-size 14px;
+        line-height 1.2;
+        letter-spacing 1px;
+        flex-basis 140px;
+        display flex;
+        flex-direction column;
+        transition all .3s;
+        text-decoration none;
+        &--vertical {
+            flex-basis 50px;
+        }
+        &-text {
+            margin auto;
+            padding-top 4px;
+        }
+        &-border {
+            width 100%;
+            height 4px;
+            transition all .3s;
+        }
+    }
+    &__link:hover {
+        cursor pointer;
+    }
+    &__link--active {
+        color $hfont;
+        cursor pointer;
+        background $hbackground;
+    }
+
+    &__link-border--active{
+        background $sfont;
+    }
+
+    &__link:hover &__link-border {
+        background $sfont;
+    }
+    &__action-container {
+        flex-basis 229px;
+        display flex;
+    }
+    &__action-phones {
+        margin auto;
+        font-family MyriadPro-Bold;
+        font-size 24px;
+        letter-spacing 0.7px;
+        transition: all 0.3s;
+    }
+    &__phone {
+        margin 0;
+        color $sfont;
+        text-decoration none;
+        display block;
+    }
+    &__phone:first-child {
+        margin-bottom 14px;
+    }
+    &__action-request {
+        display flex;
+        width: 100%;
+        transition: all .3s;
+        &-button {
+            margin auto;
+            border 2px solid $sfont;
+            font-family MyriadPro-Bold;
+            font-size 16px;
+            background $background;
+            color $sfont;
+            border-radius 10px;
+            padding: 8px 24px;
+        }
+        &-button:hover {
+            cursor pointer;
+        }
+    }
+}
+
+.header--scrolled {
+    height 80px;
+}
+
+.header__action--hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity 0;
+}
+
+
+/* Tablet - Mobile */
+
+$tabletMobile-min=320px;
+$tabletMobile-max=1024px;
+/* Tablet */
+
+$tablet-min=768px;
+$tablet-max=1024px;
+/* Mobile */
+
+$mobile-min=320px;
+$mobile-max=767px;
+/* Mobile iPhone 6 and 6 plus */
+
+$iphone6-min=375px;
+$iphone6-max=736px;
+/* Iphone 5 */
+
+$iphone5-min=320px;
+$iphone5-max=568px;
+/* Tablet - Mobile */
+
+@media only screen and (min-width: $tabletMobile-min) and (max-width: $tabletMobile-max) {}
+
+
+/* Tablet */
+
+@media only screen and (min-width: $tablet-min) and (max-width: $tablet-max) {}
+
+
+/* Mobile */
+
+@media only screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .header {
+        &__wrapper {
+            justify-content: space-between;
+        }
+        &__nav-container {
+            display: none;
+        }
+        &__hamburger {
+            display: flex;
+        }
+    }
+}
+
+
+/* Mobile iPhone 6 and 6 plus */
+
+@media only screen and (min-width: $iphone6-min) and (max-width: $iphone6-max) {}
+
+
+/* Mobile iPhone 5 */
+
+@media only screen and (min-width: $iphone5-min) and (max-width: $iphone5-max) {}
+
+@media only screen and (max-width: 1420px) {
+    .header {
+        &__action-container {
+            display: none;
+        }
+    }
+}

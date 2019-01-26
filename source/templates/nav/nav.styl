@@ -1,0 +1,28 @@
+$main=#a5acae;
+$second=#ff8207;
+.g-nav {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 100px;
+    right: 11px;
+    z-index: 4;
+    &__el {
+        width: 18px;
+        height: 18px;
+        background: $main;
+        display: block;
+        border-radius: 50%;
+        margin: 0 0 10px 0;
+        &--active {
+            background: $second;
+        }
+    }
+    &__el--active{
+        background: $second;
+    }
+
+    &--disable{
+        display : none !important;
+    }
+}

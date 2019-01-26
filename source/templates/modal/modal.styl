@@ -1,0 +1,60 @@
+.request-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    font-family MyriadPro-Regular;
+
+    &__content{
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 2px solid $sfont;
+        width: 80%;
+        position: relative;
+
+    }
+
+    &__close {
+        color: $hfont;
+        right: 20px;
+        top: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+    }
+
+    &__close:hover,
+    &__close:focus {
+        color: $hbackground;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &__header{
+        
+    }
+    &__body{
+        
+    }
+    &__footer{
+        
+    }
+
+    &__button{
+        font-family: MyriadPro-Bold;
+        font-size: 16px;
+        background: #ff8207;
+        color: #fff;
+        border: 0;
+        width: 180px;
+        height: 40px;
+        border-radius: 10px;
+        letter-spacing: .5px;
+    }
+}

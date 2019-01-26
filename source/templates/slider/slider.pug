@@ -1,0 +1,21 @@
+section.slider#main
+    div.swiper-container.slider__SWIPER-CONTAINER
+        div.swiper-wrapper
+            - for (var i = 0; i < 5; i++) {
+                div.swiper-slide
+                    div.slider__slide-container
+                        div.slider__background
+                        div.slider__slide-wrapper
+                            div.slider__slide-content
+                                h1.slider__caption.g-uppercase.g-text-center главный заголовок
+                                div.slider__devider
+                                    img.slider__devider-image(src="./img/devider.png", alt="Error")
+                                p.slider__text.g-uppercase.g-text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. 
+                                button.slider__button.g-uppercase.js-open-modal(type="button") оформить заявку
+            - }             
+        div.swiper-button-prev.slider__custom-button.slider__custom-button--prev
+        div.swiper-button-next.slider__custom-button.slider__custom-button--next
+        div.swiper-pagination.slider__pagination
+        div.js-anchor
+            a.slider__down(href="#portfolio")
+                div.slider__down-icon

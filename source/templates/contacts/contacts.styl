@@ -1,0 +1,231 @@
+$caption=#28363d;
+$scaption=#ff8207;
+$text=#8198a0;
+$stext=#999999;
+$ttext=#c0c0c0;
+.contacts {
+    font-family MyriadPro-Regular;
+    width: 100%;
+    padding-top: 77px;
+    margin-bottom: 99px;
+    &__wrapper {
+        max-width: 940px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__caption {
+        color $caption;
+        font-size 46px;
+        letter-spacing 10px;
+        margin 0;
+        margin-bottom 14px;
+    }
+    &__seporator {
+        background-image url(../img/sprite-1.png);
+        background-position 0px -46px;
+        width 31px;
+        height 6px;
+        margin 0 auto;
+    }
+    &__text {
+        font-size 18px;
+        color: $text;
+        margin: 0;
+        margin-top: 17px;
+        padding: 0 60px 0 60px;
+        line-height: 35px;
+    }
+    &__container {
+        display: flex;
+        margin-top: 35px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__info {
+        flex-basis: 380px;
+        height: 250px;
+    }
+    &__feedback {
+        flex-basis: 560px;
+    }
+}
+
+.info {
+    overflow: hidden;
+    &__caption {
+        font-family MyriadPro-Bold;
+        color: $scaption;
+        margin: 0;
+        font-size: 24px;
+        margin-top: 8px;
+        overflow: hidden;
+    }
+    &__text {
+        font-size: 18px;
+        color: $stext;
+        margin: 10px 0 20px 0;
+        &--spacing {
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.feedback {
+    &__form {
+        margin-left: 18px;
+    }
+    &__label {
+        color $caption;
+        font-family MyriadPro-Bold;
+        font-size: 24px;
+        display: block;
+        margin: 9px 0 20px 0;
+        &--review {
+            margin: 25px 0 6px 0;
+        }
+        &--file {
+            height: 60px;
+            width: 50px;
+            background: $scaption;
+            color: #fff;
+            line-height: 60px;
+            border-radius: 10px;
+            margin: 0;
+            display: inline-block;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &--captcha {
+            margin: 25px 0 10px 0;
+        }
+    }
+    &__input,
+    &__textarea {
+        width: 100%;
+        border: 0;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 18px;
+        font-family MyriadPro-Italic;
+        color: $ttext;
+        &--captcha {
+            width: 55%;
+        }
+    }
+    &__textarea {
+        line-height: 20px;
+        background-image: linear-gradient(transparent, transparent 19px, #e5e5e5 0px);
+        background-size: 100% 20px;
+        resize: none;
+        height: 105px;
+        margin-top: 8px;
+        border-bottom: none;
+    }
+    &__file {
+        display: none;
+    }
+    &__file-label {
+        color $caption;
+        font-family MyriadPro-Bold;
+        font-size: 24px;
+        display: inline;
+        margin-left: 12px;
+    }
+    &__submit-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__submit {
+        width: 220px;
+        height: 60px;
+        background: $scaption;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-family MyriadPro-Regular;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    &__submit:hover {
+        cursor pointer
+    }
+}
+
+
+/* Tablet - Mobile */
+
+$tabletMobile-min=320px;
+$tabletMobile-max=1024px;
+/* Tablet */
+
+$tablet-min=768px;
+$tablet-max=1024px;
+/* Mobile */
+
+$mobile-min=320px;
+$mobile-max=767px;
+/* Mobile iPhone 6 and 6 plus */
+
+$iphone6-min=375px;
+$iphone6-max=736px;
+/* Iphone 5 */
+
+$iphone5-min=320px;
+$iphone5-max=568px;
+/* Tablet - Mobile */
+
+@media only screen and (min-width: $tabletMobile-min) and (max-width: $tabletMobile-max) {}
+
+
+/* Tablet */
+
+@media only screen and (min-width: $tablet-min) and (max-width: $tablet-max) {}
+
+
+/* Mobile */
+
+@media only screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .contacts {
+        .info {
+            text-align: center;
+        }
+    }
+}
+
+
+/* Mobile iPhone 6 and 6 plus */
+
+@media only screen and (min-width: $iphone6-min) and (max-width: $iphone6-max) {
+    .contacts {
+        .info {
+            text-align: center;
+        }
+    }
+}
+
+
+/* Mobile iPhone 5 */
+
+@media only screen and (min-width: $iphone5-min) and (max-width: $iphone5-max) {
+    .contacts {
+        &__text {
+            padding: 0 50px 0 50px;
+        }
+        .info {
+            text-align: center;
+        }
+        .feedback__form {
+            margin: 0 10px 0 10px;
+        }
+        .feedback__submit-container {
+            justify-content: space-around;
+        }
+        .feedback__captcha,
+        .feedback__submit {
+            margin: 5px;
+        }
+    }
+}

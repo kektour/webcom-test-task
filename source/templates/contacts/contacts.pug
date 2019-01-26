@@ -1,0 +1,41 @@
+section.contacts#reviews
+    div.contacts__wrapper
+        h2.contacts__caption.g-uppercase.g-text-center оставьте отзыв
+        div.contacts__seporator
+        p.contacts__text.g-text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+        div.contacts__container
+            div.contacts__info.info#contacts
+                div.info__data
+                    h3.info__caption.g-uppercase НАШ АДРЕС
+                    p.info__text г.Минск, ул. Скрыганова, 6А, 4 этаж
+                div.info__data
+                    h3.info__caption.g-uppercase звоните
+                    p.info__text +375 (29) 123-45-67,  +375 (33) 123-45-67
+                div.info__data
+                    h3.info__caption.g-uppercase ПИШИТЕ
+                    p.info__text.info__text--spacing info@promo-webcom.by
+            div.contacts__feedback.feedback
+                form.feedback__form(action="", method="post")
+                        label.feedback__label.feedback__label--name.g-uppercase ВАШЕ ИМЯ 
+                            br
+                            input.feedback__input(type="text" placeholder="Иванов Иван" required)
+                        label.feedback__label.feedback__label--email.g-uppercase E-MAIL 
+                            br
+                            input.feedback__input(type="email" placeholder="example@mysite.com" required)
+                        label.feedback__label.feedback__label--position.g-uppercase ВАША ДОЛЖНОСТЬ 
+                            br
+                            input.feedback__input(type="text" placeholder="Должность" required)   
+                        label.feedback__label.feedback__label--review.g-uppercase ОТЗЫВ 
+                            br
+                            textarea.feedback__textarea(placeholder="Ваше сообщение" required)
+                        label.feedback__label.feedback__label--file.g-uppercase.g-text-center +
+                            input.feedback__file(type="file") 
+                        p.feedback__file-label.g-uppercase фото
+                        label.feedback__label.feedback__label--captcha.g-uppercase ВВЕДИТЕ КОД С КАРТИНКИ 
+                            br
+                            input.feedback__input.feedback__input--captcha(type="text" required)
+                        div.feedback__submit-container
+                            img.feedback__captcha(src="./img/captcha.png", alt="Error")
+                            button.feedback__submit(type="submit").g-uppercase отправить
+
+                                

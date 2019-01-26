@@ -1,0 +1,15 @@
+section.portfolio#portfolio
+    div.portfolio__wrapper
+        h2.portfolio__caption.g-uppercase.g-text-center наша работа
+        div.portfolio__seporator
+        p.portfolio__text.g-text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+        div.portfolio__container
+            - for (var i = 0; i < 6; i++) {
+                a.portfolio__work.work(href="#" target="_blank")
+                    div.work__img-container
+                     div.work__img
+                    div.work__description
+                        h3.work__caption.g-uppercase название работы
+                        div.work__seporator
+                        p.work__text.g-uppercase описание работы
+            - }

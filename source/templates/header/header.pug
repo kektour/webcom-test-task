@@ -1,0 +1,28 @@
+- var links = ["главная", "портфолио", "преимущества", "схема работы", "отзывы", "контакты"]
+- var anchors = ["main", "portfolio", "advantages","scheme-of-work", "reviews", "contacts"]
+
+
+header.header.js-header
+    div.header__wrapper
+        div.header__logo-container
+            a.header__logo-link(href="#")
+                img.header__logo(src="./img/logo.png", alt="Error")
+        nav.header__nav-container.js-nav.js-anchor
+            each link, key in links
+                if !key 
+                    a.header__link.js-nav-link.js-link(class="header__link--active" href="#" + anchors[key])
+                        p.header__link-text.g-uppercase.g-text-center=link
+                        div.header__link-border.js-link-border.header__link-border--active
+                else
+                    a.header__link.js-nav-link.js-link(href="#" + anchors[key])
+                        p.header__link-text.g-uppercase.g-text-center=link
+                        div.header__link-border.js-link-border
+        div.header__action-container
+            div.header__action-phones.js-header-phones
+                a.header__phone(href="tel:+375 (29) 123-45-67") +375 (29) 123-45-67
+                a.header__phone(href="tel:+375 (33) 123-45-67") +375 (33) 123-45-67
+            div.header__action-request.js-header-request.header__action--hidden
+                button.header__action-request-button.g-uppercase.js-open-modal(type="button") оформить заявку
+        div.header__hamburger.js-menu
+            a.header__hamburger-link(href="#")
+                img.header__hamburger-logo(src="./img/menu.png", alt="Error")

@@ -1,0 +1,172 @@
+$caption=#28363d;
+$text=#8198a0;
+.advantages {
+    width 100%;
+    padding-top: 44px;
+    font-family MyriadPro-Regular;
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 1398px;
+        width: 100%;
+    }
+    &__caption {
+        color $caption;
+        font-size 46px;
+        letter-spacing 10px;
+        margin 0;
+        margin-bottom 14px;
+    }
+    &__seporator {
+        background-image url(../img/sprite-1.png);
+        background-position 0px -46px;
+        width 31px;
+        height 6px;
+        margin 0 auto;
+    }
+    &__text {
+        font-size 18px;
+        color: $text;
+        margin: 0;
+        margin-top: 17px;
+        padding: 0 300px 0 300px;
+        line-height: 35px;
+    }
+    &__container {
+        width: 100%;
+        margin-top: 38px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.advantage {
+    width: calc(1368px/4);
+    height: 200px;
+    margin-bottom: 35px;
+    overflow hidden;
+    &__icon {
+        background-image: url(../img/sprite-2.png);
+        margin: 0 auto;
+        margin-top: 11px;
+        &--p1 {
+            background-position: 0px 0px;
+            width: 50px;
+            height: 40px;
+        }
+        &--p2 {
+            background-position: -90px -41px;
+            width: 40px;
+            height: 40px;
+        }
+        &--p3 {
+            background-position: -50px -41px;
+            width: 40px;
+            height: 40px;
+        }
+        &--p4 {
+            background-position: -40px -81px;
+            width: 33px;
+            height: 40px;
+        }
+        &--p5 {
+            background-position: -90px 0px;
+            width: 40px;
+            height: 41px;
+        }
+        &--p6 {
+            background-position: 0px -40px;
+            width: 40px;
+            height: 41px;
+        }
+        &--p7 {
+            background-position: 0px -81px;
+            width: 40px;
+            height: 41px;
+        }
+        &--p8 {
+            background-position: -50px 0px;
+            width: 40px;
+            height: 41px;
+        }
+    }
+    &__caption {
+        font-family MyriadPro-Bold;
+        font-size: 16px;
+        color: $caption;
+        margin: 0;
+        margin-top: 26px;
+        letter-spacing: 1px;
+    }
+    &__description {
+        font-size: 16px;
+        color: $text;
+        margin: 0;
+        margin-top: 6px;
+        padding: 0 50px 0 50px;
+        line-height: 30px;
+    }
+}
+
+
+/* Tablet - Mobile */
+
+$tabletMobile-min=320px;
+$tabletMobile-max=1024px;
+/* Tablet */
+
+$tablet-min=768px;
+$tablet-max=1024px;
+/* Mobile */
+
+$mobile-min=320px;
+$mobile-max=767px;
+/* Mobile iPhone 6 and 6 plus */
+
+$iphone6-min=375px;
+$iphone6-max=736px;
+/* Iphone 5 */
+
+$iphone5-min=320px;
+$iphone5-max=568px;
+/* Tablet - Mobile */
+
+@media only screen and (min-width: $tabletMobile-min) and (max-width: $tabletMobile-max) {
+    .advantages {
+        &__text {
+            padding: 0 150px 0 150px;
+        }
+    }
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: $tablet-min) and (max-width: $tablet-max) {}
+
+
+/* Mobile */
+
+@media only screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .advantages {
+        &__text {
+            padding: 0 100px 0 100px;
+        }
+    }
+}
+
+
+/* Mobile iPhone 6 and 6 plus */
+
+@media only screen and (min-width: $iphone6-min) and (max-width: $iphone6-max) {}
+
+
+/* Mobile iPhone 5 */
+
+@media only screen and (min-width: $iphone5-min) and (max-width: $iphone5-max) {
+    .advantages {
+        &__text {
+            padding: 0 50px 0 50px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+section.advantages#advantages
+    div.advantages__wrapper
+        h2.advantages__caption.g-uppercase.g-text-center ПОЧЕМУ МЫ
+        div.advantages__seporator
+        p.advantages__text.g-text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+        div.advantages__container
+            - for (var i = 0; i < 8; i++) {
+                div.advantages__advantage.advantage
+                    div.advantage__icon(class="advantage__icon--p"+(i+1))
+                    h3.advantage__caption.g-uppercase.g-text-center преимущество #{i + 1}
+                    h4.advantage__description.g-text-center Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            - }
